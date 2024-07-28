@@ -16,6 +16,7 @@
 class Scene {
 public:
     void run(const float deltaTime);
+    virtual ~Scene() {}
 protected:
     virtual void start() = 0;
     virtual void update(const float deltaTime) = 0;

@@ -1,8 +1,20 @@
 #include "main.h"
 
-Scene* scene = nullptr;
+Scene *scene = nullptr;
+BaseScene *cloneScene = nullptr;
 
-void surfaceCreated(const AAssetManager* aAssetManager, const int id) {
+void surfaceCreated(const AAssetManager *aAssetManager, const int id) {
+
+    if (scene) {
+        delete scene;
+        scene = nullptr;
+    }
+
+    if (cloneScene) {
+        delete cloneScene;
+        cloneScene = nullptr;
+    }
+
     // set asset manager
     AssetManager::set(aAssetManager);
 
@@ -38,6 +50,9 @@ void surfaceCreated(const AAssetManager* aAssetManager, const int id) {
         case 9:
             scene = new DispMapping();
             break;
+        case 10:
+            cloneScene = new HelloTeapotClone();
+            break;
         default:
             // impossible case
             break;
@@ -53,6 +68,7 @@ void surfaceChanged(const int width, const int height) {
 void drawFrame(const float deltaTime) {
     // run scene
     if (scene) scene->run(deltaTime);
+    if (cloneScene) cloneScene->run(deltaTime);
 }
 
 void touchEvent(const int motion, const float x, const float y) {

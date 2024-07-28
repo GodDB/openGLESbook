@@ -39,6 +39,10 @@
 		{
 			"title": "Displacement Mapping",
 			"desc": "Ch 18. Terrain made with displacement mapping."
+		},
+		{
+			"title": "[CLONE] Hello Teapot",
+			"desc": "Ch 6. A simple teapot object."
 		}
 	]
 }

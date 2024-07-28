@@ -6,8 +6,10 @@
 #include "utility/input.h"
 #include "utility/scene.h"
 #include "example/list.h"
+#include "clone/dependency.h"
 
 extern Scene* scene;
+extern BaseScene* cloneScene;
 
 void surfaceCreated(const AAssetManager* aAssetManager, const int id);
 void surfaceChanged(const int width, const int height);
