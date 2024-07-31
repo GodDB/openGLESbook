@@ -26,6 +26,7 @@
 #include "utility/asset.h"
 #include "utility/input.h"
 #include "Camera2.h"
+#include "Texture2.h"
 
 #define LOG_D(...) __android_log_print(ANDROID_LOG_DEBUG, "godgod", __VA_ARGS__)
 #define LOG_E(...) __android_log_print(ANDROID_LOG_ERROR, "godgod", __VA_ARGS__)
@@ -33,7 +34,9 @@
 class BaseScene {
 public:
     void run(const float deltaTime);
-    virtual ~BaseScene() {}
+    virtual ~BaseScene() {
+        delete camera2;
+    }
 protected:
     virtual void start() = 0;
 
@@ -50,6 +53,7 @@ protected:
     void draw();
 
     Camera2 *camera2 = new Camera2();
+
     GLuint vertexShaderId{0};
     GLuint fragmentShaderId{0};
     GLuint programId{0};

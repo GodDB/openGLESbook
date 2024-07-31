@@ -43,6 +43,10 @@
 		{
 			"title": "[CLONE] Hello Teapot",
 			"desc": "Ch 6. A simple teapot object."
+		},
+		{
+			"title": "[CLONE] Image Texturing",
+			"desc": "Ch 8. Brick teapot made with image texturing."
 		}
 	]
 }
