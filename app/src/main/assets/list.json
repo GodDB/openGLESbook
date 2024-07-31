@@ -47,6 +47,10 @@
 		{
 			"title": "[CLONE] Image Texturing",
 			"desc": "Ch 8. Brick teapot made with image texturing."
+		},
+		{
+			"title": "[CLONE] Phong Lighting",
+			"desc": "Ch 9. Brick teapot with phong lighting effect."
 		}
 	]
 }

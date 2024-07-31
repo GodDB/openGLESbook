@@ -45,8 +45,10 @@ add_library( # Sets the name of the library.
              src/main/cpp/clone/BaseScene.cpp
              src/main/cpp/clone/Camera2.cpp
              src/main/cpp/clone/Texture2.cpp
+             src/main/cpp/clone/Light2.cpp
              src/main/cpp/clone/hello_teapot_clone/HelloTeapotClone.cpp
              src/main/cpp/clone/image_texturing_clone/ImageTexturingClone.cpp
+             src/main/cpp/clone/phong_lighting_clone/PhongLightingClone.cpp
 )
 
 # Searches for a specified prebuilt library and stores the path as a

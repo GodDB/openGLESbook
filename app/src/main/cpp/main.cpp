@@ -53,9 +53,11 @@ void surfaceCreated(const AAssetManager *aAssetManager, const int id) {
         case 10:
             cloneScene = new HelloTeapotClone();
             break;
-
         case 11:
             cloneScene = new ImageTexturingClone();
+            break;
+        case 12:
+            cloneScene = new PhongLightingClone();
         default:
             // impossible case
             break;

@@ -8,5 +8,6 @@
 #include "clone/BaseScene.h"
 #include "clone/hello_teapot_clone/HelloTeapotClone.h"
 #include "clone/image_texturing_clone/ImageTexturingClone.h"
+#include "clone/phong_lighting_clone/PhongLightingClone.h"
 
 #endif //OPENGLESBOOK_DEPENDENCY_H
