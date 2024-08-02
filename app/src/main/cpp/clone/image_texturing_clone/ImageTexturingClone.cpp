@@ -33,8 +33,11 @@ void ImageTexturingClone::start() {
 void ImageTexturingClone::update(const float deltaTime) {
     BaseScene::draw();
     // rotate camera
+    glm::quat quat = glm::angleAxis(deltaTime * glm::radians(60.0f), camera2->getUp());
+    glm::mat4 mat = glm::mat4_cast(quat);
+
     camera2->setEye(
-            glm::rotate(deltaTime * glm::radians(60.0f), camera2->getUp()) * glm::vec4(camera2->getEye(), 1.0)
+            mat * glm::vec4(camera2->getEye(), 1.0)
     );
 
 
