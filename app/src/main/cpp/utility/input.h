@@ -2,6 +2,7 @@
 #define OPENGLES_INPUT_H
 
 #include "global.h"
+#include "clone/Utils.h"
 
 class Screen {
 private:
@@ -28,6 +29,13 @@ public:
     static Motion getMotion();
     static float getX();
     static float getY();
+    static float getDeltaX();
+    static float getDeltaY();
+
+    static float getNdcX();
+    static float getNdcY();
+    static float getNdcDeltaX();
+    static float getNdcDeltaY();
 };
 
 #endif // OPENGLES_INPUT_H

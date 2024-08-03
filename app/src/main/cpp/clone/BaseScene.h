@@ -27,6 +27,7 @@
 #include "utility/input.h"
 #include "Camera2.h"
 #include "Texture2.h"
+#include "Utils.h"
 
 #define LOG_D(...) __android_log_print(ANDROID_LOG_DEBUG, "godgod", __VA_ARGS__)
 #define LOG_E(...) __android_log_print(ANDROID_LOG_ERROR, "godgod", __VA_ARGS__)

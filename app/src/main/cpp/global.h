@@ -18,7 +18,7 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <glm/gtx/transform.hpp>
 
-#define LOG_TAG "OpenGL ES 3.2"
+#define LOG_TAG "godgod"
 #define LOG_PRINT_DEBUG(...) __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)
 #define LOG_PRINT_ERROR(...) __android_log_print(ANDROID_LOG_ERROR, LOG_TAG, __VA_ARGS__)
 #define SHADOW_MAP_SIZE 1024

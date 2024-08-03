@@ -37,6 +37,10 @@ public:
         return up;
     }
 
+    glm::vec3 getRight() {
+       return glm::normalize(glm::cross(getAt(), getEye()));
+    }
+
     glm::mat4 &getViewMatrix() {
         return viewMatrix;
     }
@@ -49,7 +53,7 @@ private:
     void calculateProjMatrix();
 
     glm::vec3 eye{0.0f};
-    glm::vec3 at{0.0f};
+    glm::vec3 at{0.0f, 0.0f, -1.0f};
     glm::vec3 up{0.0f, 1.0f, 0.0f};
     float fovy{glm::radians(60.0f)};
     float aspect{1.0f};
