@@ -10,6 +10,7 @@ public:
     Camera();
     virtual void update(const Program& program) const;
     glm::mat4 getViewMatrix() const;
+    glm::mat4 getProjMatrix() const;
     glm::vec3 getEye() const;
     glm::vec3 getAt() const;
     glm::vec3 getUp() const;

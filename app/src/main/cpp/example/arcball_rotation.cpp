@@ -45,6 +45,7 @@ void ArcballRotation::arcballRotation() {
             const glm::vec3 axis = glm::inverse(glm::mat3(camera.getViewMatrix() * teapot.getWorldMatrix()))
                                    * glm::cross(lastVector, currentVector);
 
+            Utils::printMat4(teapot.getWorldMatrix());
             // update world matrix of teapot
             teapot.setWorldMatrix(teapot.getWorldMatrix() * glm::rotate(angle, axis));
         }

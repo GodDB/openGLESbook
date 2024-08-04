@@ -13,10 +13,6 @@ class Camera2 {
 public:
     // 카메라 위치
     void setEye(const glm::vec3 &inEye);
-    // 카메라 초점
-    void setAt(const glm::vec3 &inAt);
-    // 카메라 상단 벡터
-    void setUp(const glm::vec3 &inUp);
     // y축 시야각
     void setFovy(const float inFovy);
     // z축 카메라 시작점
@@ -26,21 +22,31 @@ public:
     // 가로 세로 비
     void setAspect(const float inAspect);
 
+    void setYaw(float rotate);
+
+    void setPitch(float rotate);
+
+    void setRoll(float rotate);
+
     glm::vec3& getEye() {
         return eye;
-    }
-    glm::vec3& getAt() {
-        return at;
     }
 
     glm::vec3& getUp() {
         return up;
     }
 
-    glm::vec3 getRight() {
-       return glm::normalize(glm::cross(getAt(), getEye()));
+    float getPitch() {
+        return pitch;
     }
 
+    float getYaw() {
+        return yaw;
+    }
+
+    float getRoll() {
+        return roll;
+    }
     glm::mat4 &getViewMatrix() {
         return viewMatrix;
     }
@@ -51,10 +57,17 @@ public:
 private:
     void calculateViewMatrix();
     void calculateProjMatrix();
+    void calculateRotate();
+
+    // https://sidvind.com/wiki/Yaw,_pitch,_roll_camera
+    float pitch = glm::radians(0.0f) ; // rotate x (radian)
+    float yaw = glm::radians(-90.0f); // rotate y (radian)
+    float roll = glm::radians(0.0f) ; // rotate z (radian)
 
     glm::vec3 eye{0.0f};
-    glm::vec3 at{0.0f, 0.0f, -1.0f};
-    glm::vec3 up{0.0f, 1.0f, 0.0f};
+    glm::vec3 up{0.0f, 0.0f, 0.0f};
+    glm::vec3 front = glm::normalize(glm::vec3(0.0, 0.0, 0.0));
+    glm::vec3 right = glm::normalize(glm::cross(front, up));
     float fovy{glm::radians(60.0f)};
     float aspect{1.0f};
     float zNear{5.0f};

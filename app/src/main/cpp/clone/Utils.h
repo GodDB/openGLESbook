@@ -17,6 +17,8 @@ public:
 
     static void printVec3(vec3 vec);
     static void printVec4(vec4 vec);
+    static void printMat3(mat3 mat);
+    static void printMat4(mat4 mat);
 };
 
 #endif //OPENGLESBOOK_UTILS_H

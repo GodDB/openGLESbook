@@ -15,6 +15,10 @@ glm::mat4 Camera::getViewMatrix() const {
     return viewMatrix;
 }
 
+glm::mat4 Camera::getProjMatrix() const {
+    return projMatrix;
+}
+
 glm::vec3 Camera::getEye() const {
     return eye;
 }
